@@ -1,13 +1,13 @@
 ---
-- name: Configure Nginix webserver
-  host: webserver
+- name: Configure Nginx webserver
+  host: droplet group2
   become: true
   tasks:
-   - name: Install Nginix server
+   - name: Install Nginx server
      apt: 
-       name: nginix
+       name: nginx
        state: latest
-  -name: Start nginix server
+   -name: Start nginx server
     service: 
-     name: nginix
-     state: statrted
+     name: nginx
+     state: started
